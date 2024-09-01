@@ -1,0 +1,76 @@
+h1 {
+    font-size: 20px;
+    margin: 16px;
+}
+
+input {
+    /* border: 1px solid black; */
+    border: none;
+    margin: 0 16px;
+    width: 150px;
+    padding: 16px;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    top: 0;
+    margin-left: -16px;
+    /* margin: 16px; */
+    width: 100px;
+    padding: 16px;
+}
+
+.container{
+    margin-top: 16px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.paginationContainer {
+    /* margin-left: 16px; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border-radius: 8px;
+  }
+  
+  .icon {
+    cursor: pointer;
+    color: #007bff; /* Azul para interatividade */
+    transition: transform 0.2s, color 0.2s;
+  }
+  
+  .icon:hover {
+    color: #0056b3; /* Tom mais escuro no hover */
+    transform: scale(1.1); /* Pequeno zoom */
+  }
+  
+  .pageNumber {
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .currentPage {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+  
+  .pageNumber:hover {
+    background-color: #e2e6ea;
+    border-radius: 50%;
+  }
+  
