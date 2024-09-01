@@ -5,7 +5,7 @@ function Image({url, slug, urlDownload, title, description}) {
         <div className={styles.card}>
       <img src={url} 
             alt={slug} 
-            // width="500px" 
+            width="300px" 
             loading="lazy"
             srcSet={`${url}&w=400 400w, ${url}&w=800 800w`}
             sizes="(max-width: 600px) 400px, 800px"
