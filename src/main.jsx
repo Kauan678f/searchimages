@@ -8,7 +8,7 @@ import Home from './pages/Home.jsx'
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 
 const router =  createBrowserRouter([
-  {path: "/", element: <Home />}
+  {path: "/searchimages", element: <Home />}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
