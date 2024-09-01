@@ -6,7 +6,7 @@ import { FaAngleLeft, FaAngleRight, FaAngleDoubleLeft, FaAngleDoubleRight } from
 
 function Home() {
   const [images, setImages] = useState([]);
-  const [keyword, setKeyword] = useState("house");
+  const [keyword, setKeyword] = useState();
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1);
 
@@ -15,7 +15,7 @@ function Home() {
     const fetchUnsplash = async () => {
       try {
         const response = await fetch(
-          `https://api.unsplash.com/search/photos?query=${keyword}&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
+          `https://api.unsplash.com/search/photos?query=house&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
