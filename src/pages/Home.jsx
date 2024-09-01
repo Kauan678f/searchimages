@@ -122,11 +122,8 @@ function Home() {
         
         {images.map((image) => (
           <Image key={image.id} 
-          title={image.alt_description} 
-          description={image.description} 
           url={`${image.urls.raw}&w=400&h=300&fm=webp&q=80`} 
-          urlDownload={image.urls.full}
-          slug={image.slug} />
+          urlDownload={image.urls.full}/>
         ))}
       </div>
       <div className={styles.paginationContainer}>

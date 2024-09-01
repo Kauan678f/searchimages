@@ -1,10 +1,9 @@
 import styles from "./Image.module.css"
 
-function Image({url, slug, urlDownload, title, description}) {
+function Image({url, urlDownload}) {
     return (
         <div className={styles.card}>
       <img src={url} 
-            alt={slug} 
             width="300px" 
             loading="lazy"
             srcSet={`${url}&w=400 400w, ${url}&w=800 800w`}
@@ -12,8 +11,6 @@ function Image({url, slug, urlDownload, title, description}) {
             className={styles.image}
             />
       <div className={styles.cardContent}>
-        <h3 className={styles.title}>{title || "Título da Imagem"}</h3>
-        <p className={styles.description}>{description || "Descrição indisponível."}</p>
         <a href={urlDownload} target="_blank" rel="noopener noreferrer" className={styles.downloadButton}>
           Baixar Imagem
         </a>
