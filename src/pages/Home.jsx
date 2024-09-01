@@ -15,7 +15,7 @@ function Home() {
     const fetchUnsplash = async () => {
       try {
         const response = await fetch(
-          `https://api.unsplash.com/search/photos?query=${keyword}&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
+          `https://api.unsplash.com/search/photos?query=${keyword}&page=${page}&per_page=10&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -34,7 +34,7 @@ function Home() {
     const fetchUnsplash = async () => {
         try {
           const response = await fetch(
-            `https://api.unsplash.com/search/photos?query=${keyword.toLowerCase()}&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
+            `https://api.unsplash.com/search/photos?query=${keyword.toLowerCase()}&page=${page}&per_page=10&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
           );
           if (!response.ok) {
             throw new Error("Network response was not ok");
@@ -54,7 +54,7 @@ function Home() {
     setPage(1)
     try {
         const response = await fetch(
-          `https://api.unsplash.com/search/photos?query=${keyword.toLowerCase()}&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
+          `https://api.unsplash.com/search/photos?query=${keyword.toLowerCase()}&page=${page}&per_page=10&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -109,13 +109,15 @@ function Home() {
 
   return (
     <div>
-      <h1>Busque Imagens de Alta Qualidade para Seu Blog</h1>
-      <input
-        type="text"
-        placeholder="O que você procura?"
-        onChange={(e) => setKeyword(e.target.value)}
-      />
-      <button onClick={fetchUnsplashKey}>Search</button>
+      <div className={styles.divone}>
+        <h1>Busque Imagens de Alta Qualidade para Seu Blog</h1>
+        <input
+          type="text"
+          placeholder="O que você procura?"
+          onChange={(e) => setKeyword(e.target.value)}
+        />
+        <button onClick={fetchUnsplashKey}>Search</button>
+      </div>
       <div className={styles.container}>
         
         {images.map((image) => (

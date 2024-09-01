@@ -1,3 +1,8 @@
+.divone {
+  width: 90%;
+  margin: auto;
+}
+
 h1 {
     font-size: 20px;
     margin: 16px;
@@ -22,11 +27,14 @@ button{
 }
 
 .container{
+    width: 90%;
+    margin: auto;
     margin-top: 16px;
     margin-bottom: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .paginationContainer {
