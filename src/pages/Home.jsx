@@ -6,7 +6,7 @@ import { FaAngleLeft, FaAngleRight, FaAngleDoubleLeft, FaAngleDoubleRight } from
 
 function Home() {
   const [images, setImages] = useState([]);
-  const [keyword, setKeyword] = useState();
+  const [keyword, setKeyword] = useState("house");
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1);
 
@@ -15,7 +15,7 @@ function Home() {
     const fetchUnsplash = async () => {
       try {
         const response = await fetch(
-          `https://api.unsplash.com/search/photos?query=house&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
+          `https://api.unsplash.com/search/photos?query=${keyword}&page=${page}&per_page=5&client_id=qqTlsHmg8DiYT5R2c3cPVHnM2IMJF5hQoX06NBVlZp8`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -113,7 +113,6 @@ function Home() {
       <input
         type="text"
         placeholder="O que você procura?"
-        value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
       <button onClick={fetchUnsplashKey}>Search</button>
@@ -135,12 +134,12 @@ function Home() {
 
       {page > 1 && <FaAngleLeft className={styles.icon} onClick={backpage} />}
 
-      {page !== 1 && <h2 className={styles.pageNumber} onClick={backall}>1</h2>}
+      {page !== 1 && <h2 className={styles.pageNumber}>1</h2>}
 
       <h2 className={`${styles.pageNumber} ${styles.currentPage}`}>{page}</h2>
 
       {page !== totalPages && (
-        <h2 className={styles.pageNumber} onClick={nextall}>{totalPages}</h2>
+        <h2 className={styles.pageNumber}>{totalPages}</h2>
       )}
 
       {page !== totalPages && <FaAngleRight className={styles.icon} onClick={nextpage} />}
