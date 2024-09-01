@@ -5,10 +5,12 @@ function Image({url, slug, urlDownload, title, description}) {
         <div className={styles.card}>
       <img src={url} 
             alt={slug} 
-            width="500px" 
+            // width="500px" 
             loading="lazy"
-            srcSet={`${url}&w=400 400w, ${url}&w=800 800w`}
-            sizes="(max-width: 600px) 400px, 800px"/>
+            // srcSet={`${url}&w=400 400w, ${url}&w=800 800w`}
+            // sizes="(max-width: 600px) 400px, 800px"
+            className={styles.image}
+            />
       <div className={styles.cardContent}>
         <h3 className={styles.title}>{title || "Título da Imagem"}</h3>
         <p className={styles.description}>{description || "Descrição indisponível."}</p>

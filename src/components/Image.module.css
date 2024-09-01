@@ -9,6 +9,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    justify-content: space-between;
   }
   
   .card:hover {
@@ -16,8 +17,9 @@
   }
   
   .image {
+    background-color: red;
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
   }
   
@@ -39,6 +41,7 @@
   }
   
   .downloadButton {
+    margin-top: auto;
     display: inline-block;
     padding: 8px 12px;
     background-color: #007bff;
@@ -47,6 +50,7 @@
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
+    /* margin-top: 500px; */
   }
   
   .downloadButton:hover {
